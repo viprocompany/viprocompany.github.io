@@ -1,0 +1,1012 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+
+
+
+
+@mixin opacity($opacity)
+	opacity: $opacity / 100
+	filter: alpha(opacity=$opacity)
+.preloader
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	z-index: 100
+	background-color: $dark
+.pulse
+	position: relative
+	left: 50%
+	top: 50vh
+	margin-left: -40px
+	margin-top: -40px
+	&::before, &::after
+		content: ""
+		border: 5px solid  $icon
+		width: 80px
+		height: 80px
+		border-radius: 500px
+		position: absolute
+	&::before
+		animation: pulse-outer .8s ease-in infinite
+	&::after
+		animation: pulse-inner .8s linear infinite
+@keyframes pulse-outer
+	0%
+		@include	opacity(100)
+	50%
+		@include	opacity(50)
+	100%
+		@include	opacity(0)
+
+@keyframes pulse-inner
+	0%
+		@include	opacity(100)
+		transform: scale(0)
+	100%
+		@include	opacity(0)
+		transform: scale(1)
+// стиль кнопки с Gist 
+.button
+	display: inline-block
+	border: none
+	color: #fff
+	text-decoration: none
+	background-color: $accent
+	padding: 15px 45px
+	font-size: 13px
+	text-transform: uppercase
+	font-weight: 600
+	letter-spacing: 3px
+	border-radius: 2px
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .1s ease
+	&::after
+			transition: background-color .2s ease
+			position: absolute
+			content: ''
+			height: 4px
+			bottom: 0
+			width: 100%
+			background-color: darken($accent, 50%)
+			opacity: .18
+			border-bottom-left-radius: 2px
+			border-bottom-right-radius: 2px
+			left: 0
+	&:focus, &:hover
+			text-decoration: none
+			color: #fff
+	&:hover
+			background-color: lighten($accent, 5%)
+			&::after
+					opacity: .22
+	&:active
+			background-color: darken($accent, 5%)
+			&::after
+					opacity: .32
+
+	&.button-white
+		background-color: #fff
+		color: #444444
+		&::after
+			background-color: rgba(#000, .6)
+		&:hover
+			&::after
+				background-color: rgba(#000, .2)
+		&:active
+			&::after
+				background-color: rgba(#000, .4)	
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	background-color: $dark 
+	&.ishome
+		.site-header
+			min-height: 700px
+			height: 100vh		
+			color:  #fff
+			background-color: $dark 
+			.top-line
+				padding-top: 60px
+				px
+				position: absolute
+				width: 100%
+				z-index: 1
+.h1,.h2,.h3,.h4,.h5,.h6
+	line-height: 1.3
+	text-transform: uppercase
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+.logo 
+	img
+		width: 125px
+		height: auto
+		margin-left: 45px	
+// .phone
+// 	position: absolute
+// 	right: 85px
+// 	top: 44px
+// 	font-family: 
+// 	font-size: 22px
+// 	white-space: nowrap //целая ровная строка
+// 	text-decoration: none
+// 	color:  #fff 
+// 	.fa 
+// 		color: $icon
+// 		font-size: 22px
+// 		margin-right: 3px
+
+section , header
+	position: relative
+	background-size:  cover
+	background-position:  center
+
+section 
+	background-color: #fff
+	&.inverse
+		color: #ffffff
+		background-color: $dark
+		&.s-call
+			background-color: #fff
+			//  для s-call для блока формы отправки
+	.h2
+		font-size: 40px
+		font-weight: 800
+		color: $accent
+		span 
+			color: #ffffff
+
+
+a 
+	color: $accent
+a , button 
+	outline: none
+
+
+
+
+
+// .hamburger
+// 	position: absolute
+// 	right: 0
+// 	top: 34px
+
+// 	.hamburger-box
+// 		width: 34px
+		
+// .hamburger-inner , .hamburger-inner::after, .hamburger-inner::before
+// 	border-radius: 0	
+// 	width: 34px
+// 	height: 2px
+// 	background-color: #fff !important
+// .mm-navbar 
+// 	height: auto
+// 	position: relative
+// 	border: none //  убрать разделитель divider заданный в mmenu
+// 	.mm__title  //класс берем из инспектора паннели рааботчикв
+// 		position: absolute
+// 		padding:  0		
+// 		img
+// 			width: 128px
+// 			height: auto
+// 			margin: 10px 0 35px	
+// 	//активный элемент меню	по умолчанию
+// .mm-listitem_selected >.mm-listitem__text	
+// 	background-color: #041D1B
+// 	color: $accent !important
+// 	// выделенный элемент меню
+// .mm-listitem_selected >a.active.mm-listitem__text 	
+// 	background-color: #041D1B
+// 	color: $accent
+// 	// при наведении курсора цвет текста и иконки
+// .mm-listview
+// 	> li 
+// 		>a
+// 			transition: color 0.25s ease 
+// 			padding: 
+// 				left: 14%
+// 				right: 14%
+// 				top: 8px
+// 			&:hover
+// 				color: $accent
+// 				&::before
+// 					color: $accent
+
+// 			&::before
+// 				content: '\f219'
+// 				font-family: fontawesome
+// 				margin-right: 12px
+// 				font-size: 12px
+// 				color: #fff
+// 				transition: color 0.5s ease 
+// 	 	&.active
+// 			&>a
+// 	 			color: $accent 
+
+
+html
+.navbar
+	background: rgba($over, 0.7)
+
+	.navbar-brand
+		color: $accent
+		cursor: pointer
+	.navbar-toggler
+		background: $icon !important			
+
+		.navbar-toggler-icon
+			color: $accent
+			font-size: 12px
+			padding: 0 12px 0 0
+			margin-right: 12px	
+
+	.navbar-collapse
+		justify-content: flex-end
+		.nav-link
+			color: $accent
+			cursor: pointer
+			margin-right: 1em !important
+			
+		.nav-link:hover
+			background: #090D0C
+			color: $biruza	
+// .mm-wrapper_opened //скрол внутри меню, класс берем из инспектора паннели рааботчикв
+// 	overflow-y: scroll
+// .mm-panel_has-navbar //класс берем из инспектора паннели рааботчиквкласс берем из инспектора паннели рааботчикв
+// 	right: -18px	//задвигаем всю панель меню вправо, что бы не дергалась
+// .mm-listitem::after 
+//   display: none
+   
+// .hamburger-inner , .hamburger-inner::after, .hamburger-inner::before
+	
+// .mm-panels > .mm-panel > .mm-listview:first-child, .mm-panels > .mm-panel > .mm-navbar + .mm-listview
+// 	margin-top: 0	 //класс берем из инспектора паннели рааботчикв
+
+.header-flex
+	display: flex
+	height: 100%
+	position: relative
+	top: 0
+
+.flex-center
+	margin: auto
+.header-composition
+	text-align: center
+	position: relative	
+	p 
+		text-shadow:  -0   -3px 5px #000000
+		margin-top: 40px
+		line-height: 1.4
+	.button
+		margin-top: 23px
+
+
+.welcome
+	text-shadow:  -0   -2px 5px #000000
+	p 
+		font-size: 14px		
+		text-transform: uppercase
+		display: flex
+		align-items: center
+		white-space: nowrap
+		margin: 0
+		margin-bottom: -10px
+		span 
+			margin: 0 10px
+		&::before, &::after //горизонтальная полоска возле  абзаца "добро пожаловать"
+			content: ""
+			height: 1px
+			width: 100%
+			position: 
+			background-color: #fff
+			display: inline-block
+	.h1
+		font-weight: 100
+		font-size: 45px
+		margin: 0
+		line-height: 1.5
+		border-bottom: 1px solid #fff 
+		white-space: nowrap
+	strong 
+		text-transform: uppercase
+		display: block
+		font-size: 17px
+		margin-top: 25px
+		.fa 
+			margin-right: 10px
+			font-size: 12px
+			color: $icon
+			&:last-child 
+				margin-left: 10px
+				margin-right: inherit
+
+
+// .header-social
+// 	position: absolute
+// 	display: flex
+// 	right: 0
+// 	top: 0
+// 	height: 100%
+// 	border-left: solid rgba($icon, 0.15) 1px 
+// 	padding: 0 12px
+// 	background-color: rgba($dark, 0.5)	 
+.soc 
+	margin: auto
+	ul, li 
+		margin: 0
+		padding: 0
+		list-style-type: none //убираем точки-кружки списка
+	a
+		background-color: rgba($icon, 0.25)
+		font-size: 17px
+		display: block
+		color: $icon
+		height: 38px
+		width: 38px
+		text-align: center
+		margin: 18px 0
+		line-height: 38px
+		border-radius: 10em
+		transition: background-color .25s ease
+		&:hover
+			background-color: rgba($icon, 0.5)
+
+.header-contacts
+	position: absolute
+	bottom: 0
+	left: 0		
+	border-top:  rgba($icon, 0.15) 1px solid
+	padding: 3px 0
+	width: 100%
+	background-color: rgba($dark, 0.5)
+	.times
+		padding: 0 5px 0 20px
+	.portfolio 
+		padding: 0 -30px
+		margin: 0 
+		img		
+			height: 100%
+		  width: 100%
+		p 
+			padding: 5px
+			text-indent: 10px
+
+	
+	// .fa 
+	// 	margin-right: 5px
+	// 	color: $icon
+	.phone-h
+		font-family: san-serif
+		text-align: center
+		white-space: nowrap
+
+
+
+
+//БЛОК КОНТЕНТ
+	// Карусель
+
+// .carousel-services	
+// 	.owl-item:nth-child(odd)		
+// 		background-color: $blue
+// .carousel-services	
+// 	.owl-item:nth-child(even)		
+// 		background-color:	$red
+
+.carousel-services .owl-item:nth-child(3n+1)
+	background-color: $blue
+.carousel-services .owl-item:nth-child(3n+2)
+	background-color: $red
+.carousel-services .owl-item:nth-child(3n+3)
+	background-color: $accent
+
+// $colors:	$blue, $red, $accent	
+// @for $i from 1 through length($colors) 
+// 	.carousel-services .owl-item:nth-child(#{length($colors)}n+#{$i})
+// 		background-color:nth($colors, $i)
+// @each $key, $color in $colors 
+// 	$index: index($colors, $color)
+// 	.carousel-services.owl-item:nth-child-#{$index}-#{$key} 
+// 		background-color:nth($color) 
+.carousel-services
+	&-item 
+		color: #ffffff
+		font-size: 18px
+		font-weight: 300
+		position: relative
+		display: flex
+		flex-direction: column-reverse
+		&:hover
+			.carousel-services-image
+				opacity: 1
+		.carousel-logo
+			img 
+				width: 100%
+				height: auto				
+				
+	.owl-item:nth-child(2n+2)
+			.carousel-services-item
+				flex-direction: column	
+
+	&-content 
+		// display: flex
+		position: relative
+		padding: 40px 10% 
+
+	&-composition
+		margin: auto
+		text-align: center
+		width: 100%
+		.h3
+			font-weight: 800
+			font-size: 28px
+			margin-top: 5px
+			margin-bottom: 20px
+			span 
+				font-weight: normal
+				font-size: 18px
+				font-weight: 300
+				display: block
+
+	&-list 
+		margin: 0
+		padding: 0
+		list-style-type: none 
+		margin-bottom: 25px
+		list-style: none
+		li 
+			padding: 10px
+			border-bottom:  1px solid rgba(#000, .12)
+			&:last-child
+				border-bottom: 0
+			strong
+				font-family: san-serif
+				color: #4a4a4a
+				.fa
+					font-size: 14px
+		&-image 
+		background-size: cover
+		background-position: center
+		opacity: 0.7
+		transition: opacity  .5s ease
+
+//  .owl-nav берем из панели разработчика
+.carousel-services	
+	.owl-nav 
+		position: absolute
+		top: 0
+		width: 100%
+	
+.carousel-services.owl-carousel .owl-nav button.owl-prev
+	position: absolute
+	left: 0		
+	width: 64px
+	height: 64px
+	background-color: #ffffff
+	color: $dark			
+	text-align: center
+	line-height: 64px
+	font-size: 24px
+.carousel-services.owl-carousel .owl-nav button.owl-next
+	position: absolute
+	right: 0
+	width: 64px 
+	height: 64px
+	background-color: #ffffff
+	color: $dark			
+	text-align: center
+	line-height: 64px
+	font-size: 24px
+
+
+.owl-carousel
+// .carousel-services-item
+.owl-item
+	backface-visibility: inherit 	
+		
+//блок FOTORAMA
+
+.s
+	&-main, &-review, &-partners,  &-orders
+		padding: 5% 0
+
+	&-main
+		p 
+		 margin: 30px 0
+		 font-size: 16px
+	&-partners.section-overlay
+		&::before
+			background-color: $icon
+			opacity: 0.93
+		.h2
+			margin-top: 10px
+			span 
+				color: $accent
+	&-orders.section-overlay
+		&::before
+			background-color: $over
+			opacity: 0.8
+		.h2
+			margin-top: 10px
+			// span 
+			// 	color: $accent
+
+.section-overlay
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: $icon
+		opacity: 0.93
+
+.s-main
+	.button
+		margin-bottom: 20px
+
+.fotorama
+	background-color: rgba($dark, 0.5)
+	// .fotorama__nav берем из панели разработчика
+.fotorama__nav
+	&-wrap
+		position: absolute
+		bottom: 15px
+		padding: 0 30px
+		width: 100%
+.fotorama__thumb
+	border: 5px #fff solid
+	transition: border-color .5 ease
+.fotorama__thumb-border
+		border-color: $over
+
+//стрелки фоторамы из панели разработчика
+
+
+.fotorama__arr--next		
+	right: 10px
+	&::before
+		content: '\f105'
+		font-family: fontawesome
+		font-size: 35px	
+		color: #fff
+.fotorama__arr--prev		
+	left: 10px
+	&::before
+		content: '\f104'
+		font-family: fontawesome
+		font-size: 35px	
+		color: #fff
+// TЕХНИЧЕСКОЕ ЗАДАНИЕ 
+.s-orders
+	padding: 60px 20px 20px 20px
+	p ,ul, li
+	color: #fff
+	text-indent: 25px
+	.h5
+	 font-size: 18px
+	 font-weight: 800
+
+// форма
+.s-call
+	background-size: 		contain 
+	background-repeat: no-repeat	
+	background-position: 8%
+	&::before
+		content: ' '
+		width: 50%
+		right: 0
+		height: 100%
+		position: absolute
+		background-color: rgba($accent, .93)
+
+input, textarea, select
+	background-color: transparent
+	border: rgba(black, 0.15) 1px solid
+	border-bottom: rgba(black, 0.15) 2px solid
+	border-radius: 2px
+	padding: 8px 22px
+	outline: none
+	display: inline-block
+	font-size: 16px
+	color: #333333
+select 
+	padding: 10px 22px
+
+.success
+	display: none
+	position: absolute
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+	text-transform: uppercase
+	font-weight: bold
+	// display: flex  //будет управляться через скрипт
+	z-index: 10
+	span 
+		margin: auto
+	& ~ *
+		transition: all  .5s ease
+	&.active
+		& ~ *
+			opacity: .5 
+			filter: blur(10px)
+
+.callback
+	padding: 25% 0
+	position: relative	
+	
+	&-logo 
+		img
+			width: 100px
+			height: auto 
+
+	.formhead
+		margin: 0
+		font-size: 30px
+		color: #ffffff 
+	
+	p 
+		margin: 0
+
+ input, textarea, select
+	 color: #ffffff
+	 width: 100%	
+	 margin-top: 17px
+
+		&::-webkit-input-placeholder
+			color: #fff
+			opacity: 1
+		&::-moz-placeholder
+			color: #fff
+			opacity: 1
+		&:-ms-input-placeholder
+			color: #fff
+			opacity: 1
+
+		.option 
+			color: #333333
+
+	select
+		.option 
+			padding: 10px 22px
+			&:hover
+				background-color: $accent
+				padding: 10px 22px
+		
+	.button
+		margin: 50px 0
+
+//карусель отзывы
+.reviews
+	text-align: center
+
+	.owl-dots
+		width: 100px
+		text-align: center
+		margin-top: 60px
+		margin: auto
+		button.owl-dot
+			width: 8px
+			height: 8px
+			background-color: #ffffff
+			border-radius: 10em
+			display: inline-block
+			margin: 5px
+			transition: background-color .5s ease, transform .5s ease
+			&.active
+				background-color: $accent
+				transform: scale(1.3)
+
+.review
+	margin-top: 20px
+	&-header
+		font-family: 'Times New Roman', serif
+		font-style: italic	
+		font-size: 30px
+		font-weight: bold
+	&-date
+		font-family: 'Times New Roman', serif
+		font-style: italic	
+		font-size: 15px	
+		margin-top: 2px
+		color: #888888
+	&-stars 
+		margin: 20px 0 35px
+		color: $accent
+		.fa 
+			margin: 0 2.5px
+	&-text 
+		color: #888888
+
+.quotes
+	position: absolute
+	width: 100%
+	&::before, &::after 
+		content: ',,'
+		position: absolute
+		top: 180px
+		font-size: 56px	
+		color: $accent
+		font-family: 'Times New Roman', serif
+		font-weight: bold
+		line-height: 0
+		transform: rotate(180deg)
+		display: block
+	&::before
+		top: 180px
+		left: -60px
+	&::after
+		top: 140px
+		right: -30px 
+		transform: rotate(0)
+
+//карусель партнеры
+.partners
+	// padding: 0 50px
+	.partner
+		height: 100%
+		display: flex
+		margin: auto
+	.owl-stage
+		display: flex
+	.owl-item
+		margin-top: 30px
+		img 
+			max-width: 100%
+			width: auto 
+			display: inline-block
+			margin: auto
+	.owl-nav 
+		position: absolute
+		top: 0				
+		width: 100%
+		z-index: 2
+	
+		button.owl-prev, button.owl-next
+			position: absolute
+			top: 60px
+			color: $accent
+			font-size: 30px
+			transition: opacity 0.5s 
+			width: 30px
+			//ширину элемента задаем чтобы легче было попасть в него курсором
+				
+			&:hover
+				opacity: 0.6
+				
+		button.owl-prev
+			left: -60px
+		button.owl-next	
+			right: -60px
+			
+
+			
+	// .owl-nav button.owl-prev
+	// 	position: absolute
+	// 	top: 0
+	// 	left: 0		
+	// 	width: 64px
+	// 	height: 64px
+	// 	background-color: #ffffff
+	// 	color: $dark			
+	// 	text-align: center
+	// 	line-height: 64px
+	// 	font-size: 24px
+	// .owl-nav button.owl-next
+	// 	position: absolute
+	// 	top: 0
+	// 	right: 0
+	// 	width: 64px 
+	// 	height: 64px
+	// 	background-color: #ffffff
+	// 	color: $dark			
+	// 	text-align: center
+	// 	line-height: 64px
+	// 	font-size: 24px		
+
+
+
+
+	// FOOTER
+.main-footer
+	background-color: $dark
+	color: #fff
+	font-size: 14px
+	padding: 3% 0
+
+.footer-column
+	margin: 15px 0
+	p 
+		position: relative
+		font-size: 15px
+
+.logo-footer 
+	width: 125px
+	height: auto
+	+ p
+		color: $icon
+		padding: auto 
+		margin: 
+			bottom: 15px
+			top: 15px
+		font-size: 14px
+.social-footer
+	margin-top: 30px
+	white-space: nowrap
+
+	.soc
+		li
+			display: inline-block
+			margin: 3px
+			a 
+				margin-bottom: 0
+				font-size: 17px
+			
+.footer-menu
+	ul 
+		padding: 0
+		margin: 0
+		list-style-type: none
+		li.active
+			a
+				color: $accent
+				&::before
+					color: $accent
+		a 
+			color: #979797			
+			transition: color .25s ease
+			display: inline-block
+			padding: 4px 0
+			text-decoration: underline
+			padding-left: 20px
+			position: relative
+			&:hover, &:focus
+				color: $accent
+				&::before
+					color: $accent
+			// &::before
+			// 	position: absolute
+			// 	font-family: fontawesome
+			// 	content: '\f219'
+			// 	left: 0
+			// 	font-size: 12px			
+			// 	color: #fff
+			// 	transition: color .5s ease
+			// 	top: 6px
+			// 	margin-right: 12px				
+
+.footer-addres
+	position: relative
+	font-size: 15px
+	padding-left: 25px
+	margin: 0 0 20px 0
+	.fa
+		position: absolute
+		left: 0
+		top: 5px
+		font-size: 18px
+		color: $icon
+	.footer-phone
+		font-size: 26px
+		font-family: san-serif	
+		padding-top: 10px
+		display: block
+		white-space: nowrap
+		.fa
+			top: 22px
+			font-size: 22px
+			left: 5px
+.footer-copyright
+	padding: 0
+	margin: 0
+	color: $icon
+	font-size: 12px	
+.map
+	min-height: 200px
+	opacity: .7
+	transition: opacity .5s ease
+	&:hover
+		opacity: 1
+
+// кнопка наверх
+.top
+	position: fixed
+	bottom: 25px
+	right: -100px
+	background-color: #e0e0e0
+	z-index: 11
+	border-radius: 10em
+	color: $over
+	font-size: 26px
+	width: 50px
+	height: 50px
+	text-align: center
+	line-height: 50px
+	cursor: pointer
+	transition: all .3s ease
+	opacity: .5
+	&:hover
+		opacity: 1
+		background-color: $accent
+		color: #fff 
+	&.active
+		right: 25px
+	 
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+@import "media" // Всегда в конце

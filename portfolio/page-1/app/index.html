@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Caprice</title>
+	<meta name="description" content="Caprice">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
+	<script src="js/modernizr-custom.js"></script>
+	<link rel="stylesheet" href="libs/normalize-css/">
+    	<link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+	<header class="main-header grid" style="background-image: url(img/0-header.jpg);">		
+		<div class="header-content grid">
+			<h5>"Любой каприз"</h5>
+			<div><img src="img/logo.png" class="logo" height="70" alt=""></div>
+			<h1>Как без хлопот съездить на шашлыки?</h1>
+			<h2>Мы Работаем - Вы отдыхаете ! </h2>
+			<div class="header-buttons">		
+				<a href="#about" class="button">О нас</a>
+				<a href="#offers" class="button ">Наши предложения</a>
+			</div>
+			<div class="info">
+				<p>Наш адрес: город Москва, 3-я улица Строителей , дом 25.</p>
+				<p>Телефон 8-111-111-11-11. Электронная почта mail@mail.mail</p>
+			</div>
+		</div>
+	</header>
+
+	<section class="portfolio-section grid">
+		<div class="portfolio-item grid" style="background-image: url(img/11.jpg)"><span>Пикник</span></div>
+		<div class="portfolio-item grid" style="background-image: url(img/12.jpg)"><span>Пикник</span></div>
+		<div class="portfolio-item grid" style="background-image: url(img/13.jpg)"><span>Свадьба</span></div>
+		<div class="portfolio-item grid" style="background-image: url(img/14.jpg)"><span>Свадьба</span></div>
+		<div class="portfolio-item grid" style="background-image: url(img/15.jpg)"><span>Экскурсия</span></div>
+		<div class="portfolio-item grid" style="background-image: url(img/16.jpg)"><span>Круиз</span></div>
+	
+<!-- 		<div class="buttoncase text-center">
+			<a href="#offers" class="button">Наши предложения</a>
+		</div> -->
+	</section>
+
+	<section class="section-ready landing-section " id="about">
+
+		<div class="container grid">
+			
+			<div class="ready-left">
+				<h1>О нас</h1>
+				<h2>Хотите отдохнуть ? <br>Так и не решили на чьей машине ехать?<br>Ищете трезвого водителя?<br>Хотите в путешествие по собственному маршруту?<br>Мы  всё сделаем за вас ! </h2>
+				<ul>
+					<li>Мы предлагаем взять на себя все хлопоты по выездам на природу на пикники либо иные мероприятия. Собрать участников по выбранным адресам , а по окончании мероприятий развезти их по домам.  </li>
+					<li>Предоставим транспорт, на котром вы сможете вывезти на природу не только себя любимых , но и множество необходимых для отдыха вещей. Вы можете вазять на природу своих домашних животных. Вам не придется спорить о том, на чьей машине ехать на очередной пикник.</li>
+					<li>Во время выездов на природу наши микроавтобусы гораздо дальше смогут проехать по проселочным дорогам, даже туда , куда ужу давно не могут проехать обычные легковые автомобили.</li>
+					<li>	Наш сотрудники окажут содействие во время проведения мероприятий и поработают за мангалом во время пикника.</li>
+					<li>Вам не нужно беспокоиться о том, что после хорошего отдыха нужно вызывать трезвого водителя.</li>
+					<li>Возможен заказ персрнальных экскурсий и путешествий по вашему маршруту.</li>
+					<li>Наш транспорт будет солидно выглядеть в свадебных кортежах.</li>
+				</ul>
+
+
+			</div>
+
+			<div class="ready-right">
+				
+				<img src="img/example2.jpg" alt="Example" class="img-responsive">
+
+			</div>
+
+		</div>
+	</section>
+
+	<section class="formsection">
+		<div class="container">
+			<h3>Проконсультируйтесь по почте или закажите звонок</h3>
+			<form class="grid  ajax-contact-form" >
+				<div><input type="text" name="user_name" id="user_name" placeholder="ВАШЕ ИМЯ..."  pattern="^[a-zA-Zа-яА-ЯёЁІіЇїЄєҐґ']+$" required></div>
+				<div><input type="text" name="user_email" id="user_email" placeholder="ВАШ ТЕЛЕФОН ИЛИ ПОЧТА..." required></div>
+				<div><textarea  name="text_comment" id="text_comment"  placeholder="ВВЕДИТЕ ТЕКСТ..." required></textarea></div>
+				<div><button type="submit" id="btn_submit" class="button">Отправить</button>
+					<div class="messages"></div> 
+				</div>
+			</form>
+          
+		</div>
+	</section>
+
+	<section class="landing-section section-blog" id="offers">
+		<div class="container">
+			
+			<h2>Наши предложения</h2>
+
+			<div class="blog-home grid">
+				
+				<a href="#" class="blog-item grid">
+					<span class="blog-item-img" style="background-image: url(img/1.jpg);"></span>
+					<span class="blog-item-content grid">
+						<h4>Микроавтобус Мерседес на 10 мест.</h4>
+						<p>Суперкомфортабельный микроавтобус отвезет вас в аэропорт, деловую поездку , на экскурсию и конечно на природу.</p>
+					</span>
+				</a>
+
+				<a href="#" class="blog-item grid">
+					<span class="blog-item-img" style="background-image: url(img/2.jpg);"></span>
+					<span class="blog-item-content grid">
+						<h4>Микроавтобус Фольксваген на 17 мест.</h4>
+						<p>Суперкомфортабельный микроавтобус отвезет вас в аэропорт, деловую поездку , на экскурсию и конечно на природу.</p>
+					</span>
+				</a>
+
+				<a href="#" class="blog-item grid">
+					<span class="blog-item-img" style="background-image: url(img/3.jpg);"></span>
+					<span class="blog-item-content grid">
+						<h4>Лимузин с баром.</h4>
+						<p>В этом лимузине можно не просто передвигаться в свадебном кортеже, в нем можно жить!</p>
+					</span>
+				</a>
+
+				<a href="#" class="blog-item grid">
+					<span class="blog-item-img" style="background-image: url(img/4.jpg);"></span>
+					<span class="blog-item-content grid">
+						<h4>Прокат палаток и спортивного инвентаря.</h4>
+						<p>У нас можно арендовать спортивное снаряжение и палатки.</p>
+					</span>
+				</a>
+
+				<a href="#" class="blog-item grid">
+					<span class="blog-item-img" style="background-image: url(img/5.jpg);"></span>
+					<span class="blog-item-content grid">
+						<h4>Прокат мебели.</h4>
+						<p>У нас можно арендовать мебель для комфортного отдыха на природе.</p>
+					</span>
+				</a>
+
+				<a href="#" class="blog-item grid">
+					<span class="blog-item-img" style="background-image: url(img/6.jpg);"></span>
+					<span class="blog-item-content grid">
+						<h4>Прокат мангала .</h4>
+						<p>Можно воспользоваться мангалом , решетками и шампурами. Можно заказать уоль или дрова.</p>
+					</span>
+				</a>
+
+				<div class="buttoncase text-center">
+					<a href="#about" class="button ">О нас</a>
+				</div>
+                
+
+			</div>
+
+		</div>
+	</section>
+
+	<footer class="main-footer">
+		<div class="container">
+			<div class="social">				
+				<a href="#vk"><img src="img/vk.jpg" alt=""></a>
+				<a href="#facebook"><img src="img/facebook.jpg" alt=""></a>
+				<a href="#instagram"><img src="img/instagram.jpg" alt=""></a>
+			</div>
+				<div class="info">
+				<p>Фирма "любой каприз". Наш адрес: город Москва, 3-я улица Строителей , дом 25. Телефон 8-111-111-11-11. 
+				 Электронная почта mail@mail.mail</p>
+			</div>
+			
+			<div class="footer-logo">
+			<span>ViPro Studio</span>
+			</div>
+			<div class="footer-copy">2019</div>
+		</div>
+	</footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+  
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
