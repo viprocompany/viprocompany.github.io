@@ -154,7 +154,7 @@ body
 			background-color: $dark 
 			.top-line
 				padding-top: 60px
-				px
+				
 				position: absolute
 				width: 100%
 				z-index: 1
@@ -281,7 +281,7 @@ a , button
 // 	 			color: $accent 
 
 
-html
+
 .navbar
 	background: rgba($over, 0.7)
 
@@ -354,7 +354,7 @@ html
 			content: ""
 			height: 1px
 			width: 100%
-			position: 
+			position: absolute
 			background-color: #fff
 			display: inline-block
 	.h1
@@ -416,17 +416,18 @@ html
 	padding: 3px 0
 	width: 100%
 	background-color: rgba($dark, 0.5)
-	.times
-		padding: 0 5px 0 20px
 	.portfolio 
 		padding: 0 -30px
 		margin: 0 
 		img		
 			height: 100%
-		  width: 100%
+			width: 100%
 		p 
 			padding: 5px
 			text-indent: 10px
+	.times
+		padding: 0 5px 0 20px
+
 
 	
 	// .fa 
@@ -522,10 +523,10 @@ html
 				.fa
 					font-size: 14px
 		&-image 
-		background-size: cover
-		background-position: center
-		opacity: 0.7
-		transition: opacity  .5s ease
+			background-size: cover
+			background-position: center
+			opacity: 0.7
+			transition: opacity  .5s ease
 
 //  .owl-nav берем из панели разработчика
 .carousel-services	
@@ -556,7 +557,7 @@ html
 	font-size: 24px
 
 
-.owl-carousel
+// .owl-carousel
 // .carousel-services-item
 .owl-item
 	backface-visibility: inherit 	
@@ -569,8 +570,8 @@ html
 
 	&-main
 		p 
-		 margin: 30px 0
-		 font-size: 16px
+			margin: 30px 0
+			font-size: 16px
 	&-partners.section-overlay
 		&::before
 			background-color: $icon
@@ -639,11 +640,11 @@ html
 .s-orders
 	padding: 60px 20px 20px 20px
 	p ,ul, li
-	color: #fff
-	text-indent: 25px
+		color: #fff
+		text-indent: 25px
 	.h5
-	 font-size: 18px
-	 font-weight: 800
+		font-size: 18px
+		font-weight: 800
 
 // форма
 .s-call
@@ -708,10 +709,10 @@ select
 	p 
 		margin: 0
 
- input, textarea, select
-	 color: #ffffff
-	 width: 100%	
-	 margin-top: 17px
+	input, textarea, select
+		color: #ffffff
+		width: 100%	
+		margin-top: 17px
 
 		&::-webkit-input-placeholder
 			color: #fff
@@ -996,17 +997,4 @@ select
 
 
 
-
-
-
-
-
-
-
-
-		
-
-
-
-
-@import "media" // Всегда в конце
+// @import "media" // Всегда в конце
