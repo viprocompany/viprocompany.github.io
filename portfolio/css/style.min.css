@@ -11600,6 +11600,24 @@ body textarea:required:valid {
     .button.button-white:active::after {
       background-color: rgba(0, 0, 0, 0.4); }
 
+   .button  {
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s; }
+    .button:hover  {    
+      -webkit-transform: scale(1.07);
+          -ms-transform: scale(1.07);
+              transform: scale(1.07); }
+
+ /*   .button.more2  {
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s; }
+    .button.more2:hover  {    
+      -webkit-transform: scale(1.07);
+          -ms-transform: scale(1.07);
+              transform: scale(1.07); }*/
+ 
 html, body {
   height: 100%; }
 
@@ -11610,7 +11628,8 @@ body {
   line-height: 1.65;
   font-family: "roboto-example", sans-serif;
   overflow-x: hidden;
-  background-color: #090D0C; }
+  background-color: #090D0C; 
+  margin: 0;}
   body.ishome .site-header {
     min-height: 700px;
     height: 100vh;
@@ -11652,7 +11671,9 @@ section, header {
   -webkit-background-size: cover;
           background-size: cover;
   background-position: center; }
-
+header{
+  height: 100v;
+ }
 section {
   background-color: #fff; }
   section.inverse {
@@ -11697,7 +11718,10 @@ a, button {
     .navbar .navbar-collapse .nav-link:hover {
       background: #090D0C;
       color: #18C5A3; }
-
+.site-header{
+  background-size: cover;
+  -webkit-background-size: cover;
+}
 .header-flex {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11712,7 +11736,9 @@ a, button {
 
 .header-composition {
   text-align: center;
-  position: relative; }
+  position: relative; 
+
+  }
   .header-composition p {
     text-shadow: -0   -3px 5px #000000;
     margin-top: 40px;

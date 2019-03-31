@@ -26,6 +26,14 @@ return false;
 });
 });
 
+var $ = jQuery.noConflict();
+$(window).scroll(function() {
+	var st = $(this).scrollTop();
+	// consol.log(st);
+	$('.description').css({
+		"transform" : "translate(0%, " + st/15 + "%"
+	})
+});
 
  // $(function(){
  //      $('body').fadeOut()

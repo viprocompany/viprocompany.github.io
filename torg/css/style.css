@@ -1,46 +1,114 @@
+/*
+Theme Name: Torgovy_object
+Theme URI: http://m29686vx.beget.tech
+Author: ViPro Design
+Author URI: https://wordpress.org/
+Description: Новая тема для тестового сайта Koliaskins. Верстка Bootstrap4 и SASS.
+Requires at least: WordPress 5.1.1
+Version: 1.0
+
+*/
 @import url('reset.css');
 @import url('typography.css'); 
 @import url('https://fonts.googleapis.com/css?family=Andika');
-body {    
+body {   
+
   background-color:#2C2E32; 
   font-family: 'Andika',Lucida Sans Unicode, Lucida Grande, sans-serif;
 /*background-image: url("../img/body.png"); */
 }
 .container{
   height: auto;
+ 
 }
 
-
-.header{
-  display:block;
-  margin:  0 auto 0 auto; 
-  width: 100%;
-  /* position:relative;*/
-}
-  .legend{  
-    padding: 10px;
-    background-color:#00593F;
-    margin:  0 auto 0 auto; 
-  }
-  .legend h4 {  
-    padding-bottom: 5px;
-    margin:  5px; 
-  }
-
-  .legend{  
-    padding: 10px;
-    background-color:#00593F;
-    margin:  0 auto 0 auto; 
-  }
-
-  .content{
-   height:auto ;
-   margin-top: 20px;
-   margin-bottom:5px; 
-   margin:  10px auto 0 auto;
-
+/*блок с наложением на фон */
+header{
+  height: auto;
+  
  }
- .colorContent{ 
+.header { 
+  display:block; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
+  height: 348px;
+  width: 100%;
+  margin: 0 auto 0 auto;
+  width: auto;
+  position: relative;
+  margin:  0 auto 0 auto; 
+
+}
+
+  .header .overlay {
+     overflow: hidden;
+    position: absolute;
+     height: 348px;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(41, 58, 67, 0.87); }
+  body .description {
+    position: absolute;
+    top: 3%;
+    margin: auto;
+    padding: 2em; }
+    body .description h1 {
+      color: #FA604D;
+      font-size: 44px;
+      font-weight: bold; }
+    body .description p {
+      color: #fff;
+      font-size: 24px;
+      width: 50%;
+      line-height: 1.5; }
+    body .description .buttonMore {
+      color: #fff;
+      font-size: 20px;
+      padding: 10px 20px;
+      border: 1px solid #D5501A;
+      background-color: #D5501A;
+      margin: 20px; 
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;}
+      body .description .buttonMore:hover {
+        background-color: #C43A05; 
+        -webkit-transform: scale(1.12);
+       -ms-transform: scale(1.12);
+        transform: scale(1.12); }
+      body .description .buttonMore:active {
+        background-color: #f9341b; }
+
+
+.legend{  
+  padding: 10px;  
+  margin:  0 auto 0 auto;
+  background-color:#00593F; 
+}
+.legend h4 {  
+  padding-bottom: 5px;
+  margin:  5px; 
+}
+
+ .legend img {  
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;}
+ .legend img:hover {        
+  -webkit-transform: scale(1.12);
+ -ms-transform: scale(1.12);
+  transform: scale(1.12); }
+
+.content{
+ height:auto ;
+ margin-top: 20px;
+ margin-bottom:5px; 
+ margin:  10px auto 0 auto;
+
+}
+.colorContent{ 
   background-color:#EBEDF1;
 /*  background-color:#EDFFFF;*/
 }
@@ -50,25 +118,47 @@ body {
   padding:2px;
 }
 .downaldButton { 
-
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+   transition: all 0.4s;
   cursor:pointer;
   text-align: center;
   margin:10px auto 10px auto; 
 }
+
+ .downaldButton:hover {  
+  -webkit-transform: scale(1.03);
+ -ms-transform: scale(1.03);
+  transform: scale(1.03); }
+
 .btn-rounded{
  border-radius:20px;
 }
 .card-header{
-   background-color:#D5501A
+   background-color:#D5501A;
+    -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
  
 /*  background-color: #FF7A3E;*/
 }
- 
+ .card-header:hover {
+  font-weight: bold;
+  font-size: 18px;
+background-color: #C43A05; 
+-webkit-transform: scale(1.03);
+-ms-transform: scale(1.03);
+transform: scale(1.03); }
+
+
 .card-header .btn-link{
-  
+  font-size: 18px;
   color:#ffffff;
   text-decoration: none;
-
+}
+.card-header .btn-link:hover{  
+   font-weight: bold;
+    font-size: 18px;
 }
 .card-body p{
 text-indent: 20px;
@@ -112,8 +202,7 @@ margin-bottom: 10px;
 <!--правый блок-->
 /**/
 
-.autorButton{  
-  
+.autorButton{    
   cursor:pointer;
   display: block;
   margin:  10px auto 10px auto;
@@ -136,30 +225,51 @@ margin-bottom: 10px;
   height:auto;
   padding-top: 10px;
 }
+
+.social a{
+-webkit-transition: all 0.4s;
+-o-transition: all 0.4s;
+transition: all 0.4s;
+}
+
+.social a:hover { 
+-webkit-transform: scale(1.2);
+-ms-transform: scale(1.2);
+transform: scale(1.2); }
+
+
 #mail2 {
-  background: url('../img/mail.png') no-repeat;  
+  /*background: url('../img/mail.png') no-repeat;  */
   width: 50px; 
   height: 30px;
   display: block;
   margin:  10px auto 10px auto;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
+#mail2:hover { 
+-webkit-transform: scale(1.2);
+-ms-transform: scale(1.2);
+transform: scale(1.2); }
+
 #vkontakte{
-  background: url('../img/vk.jpg') no-repeat;  
+  /*background: url('../img/vk.jpg') no-repeat;  */
   width: 50px; 
   height: 30px;
   display: block;
   margin:  10px 20px 10px auto;
 }
-#instagram{
+/*#instagram{
   background: url('../img/instagram.jpg') no-repeat;  
   width: 50px; 
   height: 30px;
   display: block;
   margin:  10px auto 10px 10px;
-}
+}*/
 #facebook{
-  background: url('../img/facebook.jpg') no-repeat;  
+  /*background: url('../img/facebook.jpg') no-repeat;*/  
   width: 50px; 
   height: 30px;
   display: block;
@@ -168,6 +278,9 @@ margin-bottom: 10px;
 
 .sideLeft {
   text-align: center;
+}
+.sideRight{
+  height: auto;
 }
 .contact{
   text-align: center;
@@ -182,8 +295,22 @@ margin-bottom: 10px;
 }
 .footer{
   display: block;
-  margin:  0 auto 0 auto; 
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  margin:  0 auto 0 auto;
+  position: relative;    
+  height: 50px;
+   width: 100%;
+
 }
+.footer .overlay{
+
+   height: 50px;
+   width: 100%;
+   background-color:  rgba(41, 58, 67, 0.87);
+ }
+
 .copyright  { 
   padding: 10px;
   width: 100%;  
@@ -226,8 +353,16 @@ margin-bottom: 10px;
 
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)	
+@media only screen and (max-width : 576px)	
 {
+     body .description h1 {      
+      font-size: 32px;
+       }
+    body .description p {      
+      font-size: 20px;
+      width: 100%;
+      line-height: 1.5; }
+
   .legend-text {
     font-size:  11px;  
     font-weight:  bold;  

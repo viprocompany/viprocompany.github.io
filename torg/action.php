@@ -10,7 +10,7 @@ if($post)
         $message  = "Имя пользователя: " . $_POST['user_name'] . "<br/>";   
 	    $message .= "E-mail пользователя: " . $_POST['user_email'] . "<br/>";     
 		$message .= "Текст письма: " . $_POST['text_comment'];		
-        $mail_to = "my@mail.ru"; 
+        $mail_to = "torgovy.object@gmail.com"; 
 		// тема письма
 		$subject = "Письмо с обратной связи";
 		
