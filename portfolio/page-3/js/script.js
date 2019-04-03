@@ -18,12 +18,34 @@ $(document).ready(function(){
 // });
 
 // скрипт  джквери для навигации
-$(".navbar a").click(function(){
-$("body,html").animate({
-scrollTop:$("#" + $(this).data('value')).offset().top
-},1000)  
+// $(".navbar a").click(function(){
+// $("body,html").animate({
+// scrollTop:$("#" + $(this).data('value')).offset().top
+// },1000)  
+// });
+
+ // паралаксы 3 штуки
+var $ = jQuery.noConflict();
+$(window).scroll(function() {
+	var st = $(this).scrollTop();
+	// consol.log(st);
+	$('.description').css({
+		"transform" : "translate(0%, " + st/4 + "%"
+	});  // паралакс букв и кнопки  над фотографией номер1 с оверлеем
+		$('.paralax2-body ').css({
+		"transform" : "translate(0%, " + st/19 + "%"
+	});  // паралакс  фотографии номер 2 между блоками
+	$('.paralax2-header').css({
+		"transform" : "translate(0%, " + st/20 + "%"
+	});  // паралакс заголовка над фотографией номер2
+	// 	$('.paralax3-body ').css({
+	// 	"transform" : "translate(0%, " + st/20 + "%"
+	// }); // паралакс фотографии номер 3 между блоками
+	$('.paralax3-header').css({
+		"transform" : "translate(0%, -" + st/50 + "%"
+	});// паралакс заголовка над фотографией номер3
 });
- 
+
  //сбор данных  с формы
  jQuery(document).ready(function($) { 
 $(".ajax-contact-form").submit(function() {

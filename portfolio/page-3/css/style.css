@@ -3,7 +3,9 @@
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 @import url("reset.css");
 body {
+  margin: 0;
   font-family: "Pacifico";
+
   /*блок с наложением на фон */
   /*блок приветсвия и преимуществ */
   /* об авторе */
@@ -22,6 +24,7 @@ body {
   /* Small Devices, Tablets */
   /* Medium Devices, Desktops */
   /* Large Devices, Wide Screens */ }
+
   body a {
     cursor: pointer; }
   body .navbar {
@@ -47,24 +50,39 @@ body {
       body .navbar .navbar-collapse .nav-link:hover {
         background: #F1F6FC;
         color: #FA604D; }
+section .paralax{
+     
+     height: 100vh;
+     background-color: #666 ;
+     position: relative;
+     overflow: hidden; 
+  }
+
   body .header {
-    background-image: url("../img/header.jpg");
-    background-attachment: fixed;
+    background-image: url("../img/header.jpg");    
     background-size: cover;
+    -webkit- background-size: cover;
     background-position: center;
-    position: relative; }
+    background-attachment: fixed;
+    overflow: hidden;
+  /*  position: relative; 
+    overflow: hidden;*/}
     body .header .overlay {
       position: absolute;
       min-height: 100%;
       min-width: 100%;
       left: 0;
       top: 0;
-      background-color: rgba(41, 58, 67, 0.37); }
+      background-color: rgba(41, 58, 67, 0.37);
+      overflow: hidden; }
   body .description {
+    display: inline-block;
     position: absolute;
     top: 30%;
     margin: auto;
-    padding: 2em; }
+    padding: 2em;   
+/*паралакс*/
+  }
     body .description h3 {
       color: #FA604D;
       font-size: 38px;
@@ -84,10 +102,101 @@ body {
         background-color: #fb8c7f; }
       body .description .buttonMore:active {
         background-color: #f9341b; }
+
+
+body .paralax2  {
+    height: 100vh;
+     background-color: #666 ;
+     position: relative;
+     overflow: hidden; 
+  }
+body .paralax2  .paralax2-body{
+    background-image: url('../img/paralax-1.jpg') ;
+    position: absolute;
+    top: -44%; 
+    /* если отступ сверху отрицательныйй, значит 
+    в скрипте сдвиг  "translate(0%, " + st/20 + "%" положительный
+    Если сделать топ положительный значит в скрипте  
+    нужно сдвиг "translate(0%, -" + st/20 + "%" с отрицателтным
+     значением и ??? соответсвенно должно поменяться направление ???*/
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+     background-size: cover;
+    -webkit- background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  /*  overflow-y: scroll;
+    overflow-x: hidden;*/
+   }
+body .paralax2  .paralax2-body .paralax2-header{
+  box-sizing: border-box;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: -15%;
+  transform-style: inherit;
+  width: 100vw;
+ font-size: 70px;
+  color: #fff
+}
+
+
+body .paralax3  {
+     padding: 0;
+     margin: 0;
+     height: 100vh;
+     background-color: #666 ;
+     position: relative;
+     overflow: hidden; 
+  }
+body .paralax3  .paralax3-body{
+    background-image: url('../img/paralax.jpg') ;
+    position: absolute;
+
+   /* top: -206%; */
+    /* если отступ сверху отрицательныйй, значит 
+    в скрипте сдвиг  "translate(0%, " + st/20 + "%" положительный
+    Если сделать топ положительный значит в скрипте  
+    нужно сдвиг "translate(0%, -" + st/20 + "%" с отрицателтным
+     значением и ??? соответсвенно должно поменяться направление ???*/
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+     background-size: cover;
+    -webkit- background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  /*  overflow-y: scroll;
+    overflow-x: hidden;*/
+   }
+body .paralax3  .paralax3-body .paralax3-header{
+  /*box-sizing: border-box;*/
+  min-height: 100vh;
+  text-align: center;
+  padding-top:  200%;
+  transform-style: inherit;
+  width: 100vw;
+ font-size: 70px;
+  color: #fff;
+}
+body .paralax3  .paralax3-body .paralax3-header h2{
+ 
+ /* text-align: center;
+  padding-top:  -10px; !important*/
+
+}
+
+
   body .about {
     margin: 4em 0;
     position: relative;
-    padding: 1em; }
+    padding: 1em; 
+  background: #FFFFFF;}
     body .about img {
       height: 100%;
       width: 100%;
@@ -196,13 +305,17 @@ body {
         transition: 0.3s ease-in-out;
         /*аниация для команды */ }
         body .team .item .des:hover {
-          height: 100%;
+          height: 90%;
           background: #FA604D9D;
           position: absolute;
           width: 89%;
-          padding: 5em;
+         /* padding-bottom: -20px;*/
+         /* padding: 5em;*/
           top: 0;
           border-bottom-left-radius: 0; }
+
+
+
   body .contact-form {
     margin: 6em 0;
     position: relative; }
@@ -267,23 +380,68 @@ body {
       font-weight: bold;
       color: #fff;
       margin: 0px 20px 0 20px; }
-  @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px){
+
+body .paralax3  .paralax3-body .paralax3-header{
+    padding-top:  600%;
+}
+   }    
+  @media only screen and (max-width: 768px) 
+  {
     body .description h3 {
       font-size: 35px; }
     body .description p {
       font-size: 16px;
-      width: 50%; } }
-  @media only screen and (max-width: 480px) {
+      width: 50%; } 
+      body .paralax2  .paralax2-body .paralax2-header{
+       font-size: 50px; 
+     }
+     body .paralax3  .paralax3-body{
+      position: absolute;
+}
+     
+     body .paralax3  .paralax3-body .paralax3-header{ 
+      padding: 10px;   
+      /*bottom: -150%*/
+      top: 600%;            
+      font-size: 60px;  
+      position: absolute; 
+
+      padding-top: 2000%;  
+
+    }
+   }
+    @media only screen and (max-width: 480px) 
+    {
     body .description h3 {
       font-size: 28px; }
     body .description p {
       font-size: 14px;
       width: 100%; }
+      body .paralax2  .paralax2-body{
+  
+    position: absolute;
+    top: -37%; 
+  }
+      body .paralax2  .paralax2-body .paralax2-header{
+        font-size: 40px; 
+        padding-top: 5%;
+     }
+/*     body .paralax3-body{
+      transform: translate("0%");
+      top: 0;
+     }*/
+     body .paralax3  .paralax3-body .paralax3-header{
+       font-size: 50px; 
+   position: absolute; 
+    padding-top: 2900%;  
+     }
     body .jobs li::before {
       margin-left: 10px;
       font-size: 44px;
       line-height: 120%;
-      text-indent: -29px; } }
+      text-indent: -29px; }
+       }
   @media only screen and (max-width: 320px) {
     body {
       /* */ } }
