@@ -89,13 +89,12 @@
 										
 									</div>
 								</div>
-								<div id="about">		</div>
+									<div id="about">		</div>
 							</div>
 						</div>
 					</div>
 				</div>
-
-				<div class="header-contacts">
+					<div class="header-contacts">
 					<div class="container">
 						<div class="row">
 							<div class=" col-lg-8 col-md-8 col-sm-12 col-12 portfolio ">
@@ -113,14 +112,38 @@
 								<div class="phone-h"><a href="skype:vipro-design"><img src="img/skype.png"
 											alt="ViPro Design"></a>vipro-design</div>
 							</div>
-							<div class="col-lg-2 col-md-2 col-sm-8 col-12 align-self-center times" id="prototypes">
+							<div class="col-lg-2 col-md-2 col-sm-8 col-12 align-self-center times" >
 								<p>Время для связи с заказчиками: 9.00 - 21.00 (московское).</p>
 							</div>
 						</div>
 					</div>
 				</div>
+
 			</header>
 		</div>
+	
+	<div class="parallax2">
+
+	<div class="bg bg--1 parallax section-overlay" style="background-image: url(img/paralax-2.jpg);">	
+		<div class="parallax3 " > 
+		  <img class="rellax" data-rellax-speed="-1"  src="img/water2.png" alt="">
+<!-- 		  <img class="rellax" data-rellax-speed="-7"  src="img/smoke-2.png" alt=""> -->
+		  <img class="rellax" data-rellax-speed="-5"  src="img/water.png" alt="">
+	
+		  <div class="rellax" data-rellax-speed="5">
+		  	<p>
+		  		Инженер-программист по образованию и веб-мастер по призванию
+		  		сверстает ваш одностраничный сайт-визитку или лендинг под ключ из ваших материалов и ваших
+		  		пожеланий.											
+		  	</p>
+     </div>
+    </div>
+    </div>
+    	
+		</div>
+	<div id="prototypes"></div>
+	</div>
+</div>
 
 		<div id="my-content">
 			<section class="s-services">
@@ -368,8 +391,32 @@
 		</div>
 	</div>
 	<div class="top" title="Наверх"><i class="fa fa-angle-double-up"></i></div>
+
 	<script src="js/scripts.min.js"></script>
-	<script src="js/script.animate.js"></script>
+		<script src="js/script.animate.js"></script>
+		<script src="js/rellax.js"></script>
+	<script> var rellax = new Rellax('.rellax');</script>
+<script src="js/bgscroll.js"></script>
+<script >
+	$(window).scroll(function(){
+  $('.bg--1').bgscroll({
+    direction: 'bottom', // направление bottom или top
+    bgpositionx: 50, // x позиция фонового изображения, от 0 до 100, размерность в %, 50 - означает по центру
+    debug: false, // Режим отладки
+    min:0, // минимальное положение (в %) на которое может смещаться фон
+    max:100 // максимальное положение (в %) на которое может смещаться фон
+  });
+  // $('.bg--2').bgscroll({
+  //   direction: 'top'
+  // });
+  // $('.bg--3').bgscroll({
+  //   direction: 'top'
+  // });
+  // $('.bg--4').bgscroll({
+  //   direction: 'bottom'
+  // });
+})
+</script>
 	<!-- Yandex.Metrika counter -->
 	<script type="text/javascript">
 		(function (m, e, t, r, i, k, a) {

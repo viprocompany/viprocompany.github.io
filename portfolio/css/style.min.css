@@ -11789,7 +11789,30 @@ a, button {
       .welcome strong .fa:last-child {
         margin-left: 10px;
         margin-right: inherit; }
-
+.header-contacts {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: rgba(105, 136, 131, 0.15) 1px solid;
+  padding: 3px 0;
+  width: 100%;
+  background-color: rgba(9, 13, 12, 0.5); 
+color: #fff;}
+  .header-contacts .times {
+    padding: 0 5px 0 20px; }
+  .header-contacts .portfolio {
+    padding: 0 -30px;
+    margin: 0; }
+    .header-contacts .portfolio img {
+      height: 100%;
+        height-width: 100%; }
+    .header-contacts .portfolio p {
+      padding: 5px;
+      text-indent: 10px; }
+  .header-contacts .phone-h {
+    font-family: san-serif;
+    text-align: center;
+    white-space: nowrap; }
 .soc {
   margin: auto; }
   .soc ul, .soc li {
@@ -11814,30 +11837,74 @@ a, button {
     .soc a:hover {
       background-color: rgba(105, 136, 131, 0.5); }
 
-.header-contacts {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  border-top: rgba(105, 136, 131, 0.15) 1px solid;
-  padding: 3px 0;
-  width: 100%;
-  background-color: rgba(9, 13, 12, 0.5); }
-  .header-contacts .times {
-    padding: 0 5px 0 20px; }
-  .header-contacts .portfolio {
-    padding: 0 -30px;
-    margin: 0; }
-    .header-contacts .portfolio img {
-      height: 100%;
-        height-width: 100%; }
-    .header-contacts .portfolio p {
-      padding: 5px;
-      text-indent: 10px; }
-  .header-contacts .phone-h {
-    font-family: san-serif;
-    text-align: center;
-    white-space: nowrap; }
 
+
+body .parallax2  {
+     height: 80vh;
+     background-color: #000 ;
+     position: relative;
+     overflow: hidden; 
+  }
+/*body .parallax2  .parallax{
+     margin: 0;
+    padding: 0;
+    width: 100vw; 
+    min-height: 100vh;   
+    background-size: cover;
+    -webkit- background-size: cover;
+    background-position: center;
+   }*/
+.bg{
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+}
+.bg.section-overlay::before {
+  background-color: #3D3C3C;
+  opacity: 0.22; }
+body .parallax2  .parallax .parallax3{
+  position: absolute;
+  min-height: 100vh;
+  text-align: center;  
+  transform-style: inherit;
+  width: 100vw;  
+   background-size: cover;
+  -webkit- background-size: cover;
+   /*  background-attachment: fixed;*/
+}
+.rellax{
+   text-align: center;  
+  transform-style: inherit; 
+  margin: 30px 170px; 
+  background-repeat: no-repeat;
+/*  color:#fff  ;
+  font-size: 30px;*/
+}
+/* .rellax-2{
+   text-align: center;  
+  transform-style: inherit; 
+  margin-bottom: 100px ; 
+  background-repeat: no-repeat;
+  color:#fff  ;
+  font-size: 30px;
+} */
+
+.s-services{
+  padding-top: 57px;
+  /* background-color: #1a171d; */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1a171d+0,7db9e8+10&1+0,1+0,0.7+99 */
+background: -moz-linear-gradient(top,  rgba(26,23,29,1) 0%, rgba(125,185,232,0.97) 10%, rgba(125,185,232,0.7) 99%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(26,23,29,1) 0%,rgba(125,185,232,0.97) 10%,rgba(125,185,232,0.7) 99%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(26,23,29,1) 0%,rgba(125,185,232,0.97) 10%,rgba(125,185,232,0.7) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a171d', endColorstr='#b37db9e8',GradientType=0 ); /* IE6-9 */
+
+  
+  
+}
 .carousel-services .owl-item:nth-child(3n+1) {
   background-color: #66C7CD; }
 
@@ -12357,6 +12424,10 @@ select {
         -ms-flex-direction: column;
             flex-direction: column; } }
 
+.rellax{   
+  margin: 12%;    
+  font-size: 28px;
+}  
 .s-main, .s-review, .s-partners {
   padding: 8% 0; }
 
@@ -12375,6 +12446,11 @@ select {
   .header-contacts .portfolio img {
     height: 70%;
       height-width: 70%; }
+  .rellax{   
+    margin: 7%;    
+    font-size: 28px;
+  }  
+
   .s-main p {
     font-size: 15px; }
   .s-main p {
@@ -12419,6 +12495,10 @@ select {
       margin: 0 3px; }
     .header-contacts .container .phone-h {
       white-space: nowrap; }
+  .rellax{   
+    margin: 3%;    
+    font-size: 26px;
+  }     
   .quotes {
     display: none; }
   .s-main p {
@@ -12484,6 +12564,13 @@ select {
     .header-contacts .container .portfolio img {
       height: 50%;
         height-width: 50%; }
+    .rellax{   
+      margin: 0;    
+      font-size: 20px;
+    }      
+  /* .rellax-2{
+    font-size: 20px;
+  }      */
   .s-main {
     padding-top: 60px; }
     .s-main p {
