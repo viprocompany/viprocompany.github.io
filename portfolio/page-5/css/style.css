@@ -438,8 +438,10 @@ input, textarea {
           transform: scale(1.02);
 }
 
-
-
+ .price {
+   overflow: hidden;
+  }
+  .pr
 
  .price .variant h2:hover{
    background-color: #DDDFE2;
@@ -522,6 +524,7 @@ padding: 5px;
 overflow: hidden;
 padding: 20px  ;
 margin: 0;
+overflow: hidden;
 
 	}
 .top-line {
