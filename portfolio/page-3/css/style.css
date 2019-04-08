@@ -113,7 +113,7 @@ body .paralax2  {
 body .paralax2  .paralax2-body{
     background-image: url('../img/paralax-1.jpg') ;
     position: absolute;
-    top: -74%; 
+    top: -44%; 
     /* если отступ сверху отрицательныйй, значит 
     в скрипте сдвиг  "translate(0%, " + st/20 + "%" положительный
     Если сделать топ положительный значит в скрипте  

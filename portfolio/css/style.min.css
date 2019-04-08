@@ -11865,7 +11865,7 @@ body .parallax2  {
 }
 .bg.section-overlay::before {
   background-color: #3D3C3C;
-  opacity: 0.22; }
+  opacity: 0.55; }
 body .parallax2  .parallax .parallax3{
   position: absolute;
   min-height: 100vh;
