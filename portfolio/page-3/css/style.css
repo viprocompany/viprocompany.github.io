@@ -23,7 +23,8 @@ body {
   /* Extra Small Devices, Phones */
   /* Small Devices, Tablets */
   /* Medium Devices, Desktops */
-  /* Large Devices, Wide Screens */ }
+  /* Large Devices, Wide Screens */ 
+overflow-x: hidden;}
 
   body a {
     cursor: pointer; }
@@ -65,6 +66,7 @@ section .paralax{
     background-position: center;
     background-attachment: fixed;
     overflow: hidden;
+    height:100vh;
   /*  position: relative; 
     overflow: hidden;*/}
     body .header .overlay {
@@ -105,21 +107,43 @@ section .paralax{
 
 
 body .paralax2  {
-    height: 100vh;
+    height:80vh;
     /* background-color: #666 ;*/
      position: relative;
      overflow: hidden; 
   }
-body .paralax2  .paralax2-body{
+  body .paralax3  {
+     height: 80vh;
+  /*   background-color: #666 ;*/
+     position: relative;
+     overflow: hidden; 
+  }
+/*  стили для плагина BGscroll*/
+.bg{
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+}  
+.bg--1{
+   background-image: url('../img/paralax-1.jpg') ;
+}
+.bg--2{
+   background-image: url('../img/paralax.jpg') ;
+}
+/*body .paralax2  .paralax2-body{
     background-image: url('../img/paralax-1.jpg') ;
     position: absolute;
-    top: -44%; 
+    top: -44%; */
     /* если отступ сверху отрицательныйй, значит 
     в скрипте сдвиг  "translate(0%, " + st/20 + "%" положительный
     Если сделать топ положительный значит в скрипте  
     нужно сдвиг "translate(0%, -" + st/20 + "%" с отрицателтным
      значением и ??? соответсвенно должно поменяться направление ???*/
-    width: 100%;
+/*    width: 100%;
     margin: 0;
     padding: 0;
     perspective: 1px;
@@ -127,84 +151,49 @@ body .paralax2  .paralax2-body{
      background-size: cover;
     -webkit- background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed;*/
   /*  overflow-y: scroll;
     overflow-x: hidden;*/
-   }
+/*   }*/
 body .paralax2  .paralax2-body .paralax2-header{
   box-sizing: border-box;
   min-height: 100vh;
   text-align: center;
-  padding-top: -15%;
   transform-style: inherit;
   width: 100vw;
  font-size: 70px;
-  color: #fff
+ }
+/*body .paralax3  .paralax3-body{
+
+   }*/
+body .paralax3  .paralax3-body .paralax3-header{
+  /*box-sizing: border-box;*/
+  min-height: 100vh;
+  text-align: center;
+   padding-top: 30%;
+  transform-style: inherit;
+  width: 100vw;
+ font-size: 70px;
 
 }
-
 body .paralax2  .paralax2-body .paralax2-header h2{
     text-shadow:2px 2px 2px rgba(0,0,0,1);
 -webkit-text-shadow:2px 2px 2px rgba(0,0,0,1);
 -moz-text-shadow:2px 2px 2px rgba(0,0,0,1);
 }
-body .paralax3  .paralax3-body .paralax3-header h2{
-    text-shadow:2px 2px 2px rgba(0,0,0,1);
+body .paralax3  .paralax3-body .paralax3-header .h2{
+text-shadow:2px 2px 2px rgba(0,0,0,1);
 -webkit-text-shadow:2px 2px 2px2px 2px 2px,1);
 -moz-text-shadow:2px 2px 2px2px 2px 2px,1);
+font-size: 70px;
 }
-body .paralax3  {
-     padding: 0;
-     margin: 0;
-     height: 100vh;
-     background-color: #666 ;
-     position: relative;
-     overflow: hidden; 
-  }
-body .paralax3  .paralax3-body{
-    background-image: url('../img/paralax.jpg') ;
-    position: absolute;
 
-   /* top: -206%; */
-    /* если отступ сверху отрицательныйй, значит 
-    в скрипте сдвиг  "translate(0%, " + st/20 + "%" положительный
-    Если сделать топ положительный значит в скрипте  
-    нужно сдвиг "translate(0%, -" + st/20 + "%" с отрицателтным
-     значением и ??? соответсвенно должно поменяться направление ???*/
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    perspective: 1px;
-    transform-style: preserve-3d;
-     background-size: cover;
-    -webkit- background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  /*  overflow-y: scroll;
-    overflow-x: hidden;*/
-   }
-body .paralax3  .paralax3-body .paralax3-header{
-  /*box-sizing: border-box;*/
-  min-height: 100vh;
-  text-align: center;
-  padding-top:  600%;
-  transform-style: inherit;
-  width: 100vw;
- font-size: 70px;
-  color: #fff;
-}
-body .paralax3  .paralax3-body .paralax3-header h2{
- /* text-align: center;
-  padding-top:  -10px; !important*/
-}
-body .paralax3  .paralax3-body .paralax3-header .h2{
- padding-bottom:  150px;
- margin: 100px;
 
- 
-  font-size: 70px;
-}
+
+
+
+
+
 
   body .about {
     margin: 4em 0;
@@ -403,9 +392,7 @@ body .paralax3  .paralax3-body .paralax3-header .h2{
       margin: 0px 20px 0 20px; }
 @media only screen and (max-width: 992px){
 
-body .paralax3  .paralax3-body .paralax3-header{
-    margin-top: 60%; 
-}
+
    }    
   @media only screen and (max-width: 768px) 
   {
@@ -422,12 +409,12 @@ body .paralax3  .paralax3-body .paralax3-header{
 }
      
      body .paralax3  .paralax3-body .paralax3-header{ 
-      padding: 10px;   
-      /*bottom: -150%*/
-      top: 600%;            
+     
+      
+              
       font-size: 60px;  
       position: absolute; 
-      margin-top: 100%; 
+     
     }
     body .paralax3  .paralax3-body .paralax3-header .h2{
   font-size: 60px;
@@ -442,20 +429,17 @@ body .paralax3  .paralax3-body .paralax3-header{
       width: 100%; }
       body .paralax2  .paralax2-body{  
     position: absolute;
-    top: -33%; 
+/*    top: -33%; */
   }
       body .paralax2  .paralax2-body .paralax2-header{
         font-size: 40px; 
-        padding-top: 5%;
+       /* padding-top: 5%;*/
      }
-/*     body .paralax3-body{
-      transform: translate("0%");
-      top: 0;
-     }*/
+
      body .paralax3  .paralax3-body .paralax3-header{
        font-size: 50px; 
    position: absolute; 
-    margin-top: 150%; 
+  
     margin-left: 0;
     margin-right: 0;
      }

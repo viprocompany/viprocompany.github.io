@@ -48,7 +48,7 @@ header{
     min-width: 100%;
     left: 0;
     top: 0;
-    background-color: rgba(41, 58, 67, 0.87); }
+    background-color:  rgba(44,46,50, 0.8); }
   body .description {
     position: absolute;
     top: 3%;
@@ -308,7 +308,7 @@ transform: scale(1.2); }
 
    height: 50px;
    width: 100%;
-   background-color:  rgba(41, 58, 67, 0.87);
+   background-color:  rgba(44,46,50, 0.8);
  }
 
 .copyright  { 

@@ -3,48 +3,48 @@
 $(document).ready(function(){
  $('.header').height($(window).height());
 });
-    // фон на всю ширину не работает?
-// $(document).ready(function(){
-//  $('.header').width($(window).width());
-// }) 
+ 
 
-// $(function(){
-//     var header = $('.header').get(0);
-//     function resizeHeader() {
-//         header.style.height = window.innerHeight + 'px';
-//     }
-//     $(window).on('resize', resizeHeader);
-//     resizeHeader();
-// });
-
-// скрипт  джквери для навигации
-// $(".navbar a").click(function(){
-// $("body,html").animate({
-// scrollTop:$("#" + $(this).data('value')).offset().top
-// },1000)  
-// });
-
- // паралаксы 3 штуки
+ // паралаксы  текста 2 штуки
 var $ = jQuery.noConflict();
 $(window).scroll(function() {
 	var st = $(this).scrollTop();
 	// consol.log(st);
-	$('.description').css({
+
+	// паралакс букв и кнопки  над фотографией номер1 с оверлеем
+			$('.description').css({
 		"transform" : "translate(0%, " + st/4 + "%"
-	});  // паралакс букв и кнопки  над фотографией номер1 с оверлеем
-		$('.paralax2-body ').css({
-		"transform" : "translate(0%, " + st/19 + "%"
-	});  // паралакс  фотографии номер 2 между блоками
+	});  		
+// паралакс заголовка над фотографией номер 2
 	$('.paralax2-header').css({
 		"transform" : "translate(0%, " + st/20 + "%"
-	});  // паралакс заголовка над фотографией номер2
-	// 	$('.paralax3-body ').css({
-	// 	"transform" : "translate(0%, " + st/20 + "%"
-	// }); // паралакс фотографии номер 3 между блоками
-	$('.paralax3-header').css({
-		"transform" : "translate(0%, -" + st/50 + "%"
-	});// паралакс заголовка над фотографией номер3
+	});  
 });
+
+// подключение плагина паралакса BGscroll для фотографии 2(косметика)
+	$(window).scroll(function(){
+  $('.bg--1').bgscroll({
+    direction: 'bottom', // направление bottom или top
+    bgpositionx: 50, // x позиция фонового изображения, от 0 до 100, 
+    // размерность в %, 50 - означает по центру
+    debug: false, // Режим отладки
+    min:0, // минимальное положение (в %) на которое может смещаться фон
+    max:100 // максимальное положение (в %) на которое может смещаться фон
+  });
+    $('.bg--2').bgscroll({
+    direction: 'top',
+    
+
+  });
+  // $('.bg--3').bgscroll({
+  //   direction: 'top'
+  // });
+  // $('.bg--4').bgscroll({
+  //   direction: 'bottom',
+  
+  // });
+});
+
 
  //сбор данных  с формы
  jQuery(document).ready(function($) { 
