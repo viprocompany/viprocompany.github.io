@@ -10950,22 +10950,26 @@ h1, h2 {
 .calculator {
   color: #fff; }
   .calculator .price {
-    margin: 10px	0; }
+    margin: 10px  0; }
   .calculator .button {
     margin: 20px;
     color: #090D0C; }
+   .calculator .priceForm {
+       text-align: left; }
   .calculator .priceForm label {
     font-size: 15px;
     margin: 10px;
     padding-left: 5px;
     text-align: left; }
   .calculator .price-item {
-    margin: 5px	0;
+    margin: 5px 0;
     background-color: #090D0C;
     overflow: hidden;
     -webkit-box-shadow: 0 0 10px #698883;
             box-shadow: 0 0 10px #698883; }
     .calculator .price-item h4 {
+      text-align: center;
+      margin-top: 10px;
       font-size: 1.0rem; }
     .calculator .price-item .form-block {
       white-space: nowrap; }
