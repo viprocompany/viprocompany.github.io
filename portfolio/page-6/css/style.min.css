@@ -10898,6 +10898,7 @@ h1, h2 {
     margin-top: 20px;
     font-size: 20px;
     background-color: #fff;
+    text-shadow: 1px 0px 0px black;
     color: #444444; }
     .button.button-white::after {
       background-color: rgba(0, 0, 0, 0.6); }
