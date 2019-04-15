@@ -11905,14 +11905,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a171d', end
   
   
 }
-.carousel-services .owl-item:nth-child(3n+1) {
+.carousel-services .owl-item:nth-child(6n+1) {
   background-color: #66C7CD; }
 
-.carousel-services .owl-item:nth-child(3n+2) {
+.carousel-services .owl-item:nth-child(6n+2) {
   background-color: #F86868; }
 
-.carousel-services .owl-item:nth-child(3n+3) {
+.carousel-services .owl-item:nth-child(6n+3) {
+  background-color:#1099FF ; }
+  .carousel-services .owl-item:nth-child(6n+4) {
   background-color: #FFAC55; }
+
+.carousel-services .owl-item:nth-child(6n+5) {
+  background-color: #65318C; }
+
+.carousel-services .owl-item:nth-child(6n+6) {
+  background-color: #FFEE38; }
 
 .carousel-services-item {
   color: #ffffff;
@@ -11932,7 +11940,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a171d', end
     opacity: 1; }
   .carousel-services-item .carousel-logo img {
     width: 100%;
-    height: auto; }
+    height: auto; 
+      display: inline-block;
+      margin: auto ;
+  }
 
 .carousel-services .owl-item:nth-child(2n+2) .carousel-services-item {
   -webkit-box-orient: vertical;
@@ -11983,6 +11994,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a171d', end
       color: #4a4a4a; }
       .carousel-services-list li strong .fa {
         font-size: 14px; }
+
+
+
+
+
 
 .carousel-services .owl-nav {
   position: absolute;
