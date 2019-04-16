@@ -21,7 +21,7 @@
   font-weight: normal;
   font-style: normal; }
 
- 
+
   
 
 
@@ -177,7 +177,9 @@
  }
 
  .adv {
-  overflow: hidden;
+ 	max-height: auto;
+ 	min-width: 100%;
+/*  overflow: hidden;*/
  background-color:#293A43;  
  color:  #FFF654;
  font-size: 16px;
