@@ -21,7 +21,7 @@
   font-weight: normal;
   font-style: normal; }
 
-  @import url('https://fonts.googleapis.com/css?family=Seymour+One&subset=cyrillic');
+ 
   
 
 
@@ -33,7 +33,7 @@
       position: relative;
       margin: 0;
       height: 100%;
-      font-family: 'roboto-example';
+     
     }    
     html {
       height: 100%;
@@ -57,7 +57,7 @@
       margin-bottom: 5px;
       font-size: 66px;
       font-weight: 800;
-      font-family: 'Seymour One', sans-serif;
+      font-family: 'Ruslan Display', cursive;
     }
     h2 {
       padding: 00px 20px 30px 20px;
@@ -71,23 +71,25 @@
      
       margin-top: 10px;
       margin-bottom: 0;
-      font-family: 'Seymour One', sans-serif;
+      font-family: 'Ruslan Display', cursive;
     }
     .h1{
       font-size: 66px;
-      font-family: 'Seymour One', sans-serif;
+      font-family: 'Ruslan Display', cursive;
       font-weight: 800;
     }
     .h2{
       font-size: 22px;
-      font-family: 'Seymour One', sans-serif;
+      font-family: 'Ruslan Display', cursive;
     }
      .h3{
       font-size: 44px;
-      font-family: 'Seymour One', sans-serif;
+      font-family: 'Ruslan Display', cursive;
     }
 
-
+   p{
+   	 font-family: 'roboto-example';
+   }
     .top-line {
       color:  #FFF654;
       text-shadow: 2px 2px 2px black;
@@ -174,31 +176,31 @@
   text-shadow: 1px 1px 1px  #FFF654; 
  }
 
-     .adv {
-      overflow: hidden;
-     background-color:#293A43;  
-     color:  #FFF654;
-     font-size: 16px;
-     margin: 40px 0;
-     padding-top: 40px;
-     }
-     .adv i{  
-     color:  #FFF654;
-     font-size: 38px;
-     margin: 20px 0 0 0;
-     -webkit-transition: all 0.5s;
-     -o-transition: all 0.5s;
-     transition: all 0.5s;
-   }
-     .adv i:hover{  
-       -webkit-transform: scale(1.3);
-       -ms-transform: scale(1.3);
-       transform: scale(1.3); 
-     }
-   
-     .adv p{ 
-   padding: 5px;
-     }
+ .adv {
+  overflow: hidden;
+ background-color:#293A43;  
+ color:  #FFF654;
+ font-size: 16px;
+ margin: 40px 0;
+ padding-top: 40px;
+ }
+ .adv i{  
+ color:  #FFF654;
+ font-size: 38px;
+ margin: 20px 0 0 0;
+ -webkit-transition: all 0.5s;
+ -o-transition: all 0.5s;
+ transition: all 0.5s;
+}
+ .adv i:hover{  
+   -webkit-transform: scale(1.3);
+   -ms-transform: scale(1.3);
+   transform: scale(1.3); 
+ }
+
+ .adv p{ 
+padding: 5px;
+ }
 
 
 
@@ -226,7 +228,7 @@
     font-weight: 800;
     margin: 0;
     padding:60px 0 20px 0;
-    font-family: 'Seymour One', sans-serif;
+    font-family: 'Ruslan Display', cursive;
     color: #293A43;
     text-shadow: 1px 1px 1px  #FFF654; 
   }
