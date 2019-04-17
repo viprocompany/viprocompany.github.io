@@ -90,38 +90,30 @@
    p{
    	 font-family: 'roboto-example';
    }
-    .top-line {
-      color:  #FFF654;
-      text-shadow: 2px 2px 2px black;
-    }
-     .my-header {    
-     /*   background-attachment: fixed;*/
-        background-size: cover;
-        background-position: center;
-        position: relative; 
-        display: block;
-        overflow: hidden;
-        height: 70vh;
-        width: 100%;
-        padding: 100px 0;  
-    }
-    .my-header .navbar{
+
+    .navbar{
       background-color: #293A43;
       opacity: 0.7; 
+      font-weight: 800;
       
     }
     .navbar-nav ul{
       display: flex; 
     justify-content: end;
      }
-    .my-header .navbar a{
+   .navbar a{
        color:  #FFF654;
        text-align: left;
     }
-    .my-header .navbar a:hover{
-       color: #38FFDC;   
+   .navbar a:hover{
+       color: #38FFDC;  
+       font-weight: 800; 
     }
-    .my-header .navbar  a:active{
+  .navbar .nav-item:hover{
+      background-color: #293A43;
+      
+    }
+   .navbar  a:active{
        color:white;   
     }
     .navbar-toggler-icon{
@@ -129,6 +121,35 @@
     
       margin: 0 12px;
     }
+
+.psevdo{
+       height: 70vh;     
+     position: relative;
+     overflow: hidden; 
+}
+ .my-header {    
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+    display: block;
+    overflow: hidden;
+    height: 70vh;
+    width: 100%;
+    padding: 100px 0;  
+}
+
+
+.top-line {
+  color:  #FFF654;
+  text-shadow: 2px 2px 2px black;
+   /* display: inline-block;*/
+    position: absolute;
+    top: 10%;
+    left: 3%;
+    right: 3%;
+
+}   
 
  .page{
    position: relative;
