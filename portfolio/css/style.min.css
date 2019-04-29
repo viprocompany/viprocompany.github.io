@@ -11895,6 +11895,7 @@ body .parallax2  .parallax .parallax3{
 
 .s-services{
   padding-top: 57px;
+  min-height: 570px;
   /* background-color: #1a171d; */
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1a171d+0,7db9e8+10&1+0,1+0,0.7+99 */
 background: -moz-linear-gradient(top,  rgba(26,23,29,1) 0%, rgba(125,185,232,0.97) 10%, rgba(125,185,232,0.7) 99%); /* FF3.6-15 */
