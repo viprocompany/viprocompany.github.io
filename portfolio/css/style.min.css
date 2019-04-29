@@ -11905,7 +11905,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a171d', end
  
   
 }
-.carousel-services  .owl-stage{
+.carousel-services  .owl-item{
   min-height: 500px;
 }
 
