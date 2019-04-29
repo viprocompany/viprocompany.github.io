@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Calculator</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<script src="js/modernizr-custom.js"></script>	
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+	<div id="products" class="grid_1">		
+		<header><h3>Выберите товар для заказа</h3></header>	
+		<article><div class="subitems">		
+			<h4 class="h4">Группа товаров: </h4>
+			<select id="type_1" class="type_1 shadow" onclick="art1()"  >
+			</select>
+			<h4 class="h4">Товар: </h4>
+			<select id="model_1" class="model_1 shadow" onclick="art2()"  >
+				<option value="0" ></option>
+				<!-- <option value="0" >Apple iPhone XS 64GB</option> -->
+			</select>
+			<h4 class="h4">Описание: </h4>
+			<span id="desc_1" data-desc="Apple iPhone XS 64GB">Изумительный дисплей Super Retina занимает всю переднюю панель iPhone. Использование особых технологий OLED позволило создать HDR-дисплей с великолепной цветопередачей, глубокими черными цветами, впечатляющей яркостью и контрастом. Это самые чёткие дисплеи iPhone с самой высокой плотностью пикселей.</span>
+			<h4 class="h4">Цена:</h4>
+			<span id="price_1" data-price="2999" class="red">2 999<small> бел. руб.</small></span>
+			
+			
+			<label for="count_1">	<h4 class="h4">Количество: </h4></label><input class="shadow" type="text" id="count_1">
+		
+		</div>
+	</article>
+	<aside class="image-thumbnail " id="img_1">
+		<img  data-img="0" src="img/img0_0.png">
+	</aside>	
+	<footer class="order">
+		<button  class="add" data-order-name="Apple iPhone XS 64GB" data-order-price="2999" data-order-img="img0_0.png">Добавить в заказ</button>
+	</footer>
+</div>
+
+<div id="card" class="grid_2">
+	<div class="header"><h2>Ваш заказ</h2></div>
+	<div class="card_order_2">
+
+	</div>	
+	<div class="footer">
+		<p>Итого:	<span id="summ" class="red"></span><small> бел. руб.</small></p>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+
+<script src="js/script.js"></script>
+
+</body>
+</html> 
