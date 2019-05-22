@@ -16,7 +16,7 @@ $(window).scroll(function() {
 });
 
 $(document).ready(function(){
-	$('.more').hide().show(1200)
+	$('.more').hide().fadeIn(5000);
 });
 
 
