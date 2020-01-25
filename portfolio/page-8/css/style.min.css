@@ -2495,6 +2495,8 @@ body {
   .footer .footer__nav {
     list-style-type: none;
     text-decoration: none; }
+    .footer .footer__nav__menu li  {
+      margin: 7px 0; }
     .footer .footer__nav li a {
       color: #090D0C; }
     .footer .footer__nav li a:hover {
